@@ -15,7 +15,7 @@ func _ready():
 func _process(_delta):
 	_time_slapped += 1
 	
-	match _click.type:
+	match _click._type:
 		_click.click_type.MANUAL_CLICK:
 			pass
 			
@@ -25,7 +25,7 @@ func _process(_delta):
 
 
 func _update_view() -> void:
-	_label.text = "CLICKS:" + str(_click.total_clicks)
+	_label.text = "CLICKS:" + str(_click.get_total_clicks())
 
 
 func _add_click(amount:int) -> void:
